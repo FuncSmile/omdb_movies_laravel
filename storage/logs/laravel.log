@@ -770,3 +770,13 @@
 #22 /home/moon/Worksheet/omdb-movies/example-app/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
 #23 {main}
 "} 
+[2026-02-27 18:24:25] production.ERROR: There are no commands defined in the "boost" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"boost\" namespace. at /home/moon/Worksheet/omdb-movies/example-app/vendor/symfony/console/Application.php:694)
+[stacktrace]
+#0 /home/moon/Worksheet/omdb-movies/example-app/vendor/symfony/console/Application.php(743): Symfony\\Component\\Console\\Application->findNamespace()
+#1 /home/moon/Worksheet/omdb-movies/example-app/vendor/symfony/console/Application.php(298): Symfony\\Component\\Console\\Application->find()
+#2 /home/moon/Worksheet/omdb-movies/example-app/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun()
+#3 /home/moon/Worksheet/omdb-movies/example-app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run()
+#4 /home/moon/Worksheet/omdb-movies/example-app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 /home/moon/Worksheet/omdb-movies/example-app/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#6 {main}
+"} 

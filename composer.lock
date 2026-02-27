@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3233fbc503deba4902e2785372473243",
+    "content-hash": "331e496fd3e6407beb8f72064ae14b5d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -9909,16 +9909,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "79155f94852fa27e2f73b459f6503f5e87e2c188"
+                "reference": "ff31ad6efc62e66e518fbab1cde3453d389bcdc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/79155f94852fa27e2f73b459f6503f5e87e2c188",
-                "reference": "79155f94852fa27e2f73b459f6503f5e87e2c188",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/ff31ad6efc62e66e518fbab1cde3453d389bcdc8",
+                "reference": "ff31ad6efc62e66e518fbab1cde3453d389bcdc8",
                 "shasum": ""
             },
             "require": {
@@ -9965,9 +9965,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/2.1.5"
+                "source": "https://github.com/webmozarts/assert/tree/2.1.6"
             },
-            "time": "2026-02-18T14:09:36+00:00"
+            "time": "2026-02-27T10:28:38+00:00"
         }
     ],
     "aliases": [],
@@ -9979,5 +9979,8 @@
         "php": "^8.2"
     },
     "platform-dev": {},
+    "platform-overrides": {
+        "php": "8.4.0"
+    },
     "plugin-api-version": "2.9.0"
 }
