@@ -1,21 +1,15 @@
 import { Link } from '@inertiajs/react';
-import AppLogoIcon from '@/components/app-logo-icon';
-import type { AuthLayoutProps } from '@/types';
-import { home } from '@/routes';
-import { useTranslation } from 'react-i18next';
+import { /* useTranslation */ } from 'react-i18next';
 import LanguageToggle from '@/components/language-toggle';
+import { home } from '@/routes';
+import type { AuthLayoutProps } from '@/types';
 
 export default function AuthSimpleLayout({
     children,
     title,
     description,
 }: AuthLayoutProps) {
-    const { i18n } = useTranslation();
-
-    const toggleLanguage = () => {
-        const newLang = i18n.language === 'en' ? 'id' : 'en';
-        i18n.changeLanguage(newLang);
-    };
+    // ...existing code...
     return (
         <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-950 via-slate-900 to-black p-6 md:p-10">
             <div className="w-full max-w-md">

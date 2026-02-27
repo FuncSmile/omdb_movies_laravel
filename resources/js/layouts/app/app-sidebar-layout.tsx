@@ -1,3 +1,5 @@
+'use client';
+
 import { AppContent } from '@/components/app-content';
 import { AppShell } from '@/components/app-shell';
 import { AppSidebar } from '@/components/app-sidebar';
@@ -13,7 +15,9 @@ export default function AppSidebarLayout({
             <AppSidebar />
             <AppContent variant="sidebar" className="overflow-x-hidden">
                 <AppSidebarHeader breadcrumbs={breadcrumbs} />
-                {children}
+                <main className="flex-1 overflow-y-auto">
+                    {children}
+                </main>
             </AppContent>
         </AppShell>
     );

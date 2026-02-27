@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import { Link } from '@inertiajs/react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Movie {
     imdbID: string;

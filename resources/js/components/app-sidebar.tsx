@@ -1,5 +1,7 @@
+'use client';
+
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, Film, Heart } from 'lucide-react';
+import { Film, Heart, LayoutGrid, Star } from 'lucide-react';
 import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
@@ -11,10 +13,10 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
+    SidebarRail,
 } from '@/components/ui/sidebar';
-import type { NavItem } from '@/types';
-// brand text only (no logo)
 import { dashboard } from '@/routes';
+import type { NavItem } from '@/types';
 
 const mainNavItems: NavItem[] = [
     {
@@ -23,48 +25,43 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title: 'Movies',
-        href: '/',
-        icon: Film,
-    },
-    {
         title: 'Favorites',
         href: '/my-favorites',
         icon: Heart,
-    },
-    {
-        title: 'Settings',
-        href: '/settings/profile',
-        icon: BookOpen,
     },
 ];
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
+        title: 'GitHub',
         href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
+        icon: Film,
     },
     {
         title: 'Documentation',
         href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
+        icon: Star,
     },
 ];
 
 export function AppSidebar() {
     return (
-        <Sidebar collapsible="icon" variant="inset">
-            <SidebarHeader>
+        <Sidebar collapsible="icon" variant="inset" className="border-r border-sidebar-border/50">
+            <SidebarHeader className="border-b border-sidebar-border/50 bg-sidebar/50 backdrop-blur-sm">
                 <SidebarMenu>
                     <SidebarMenuItem>
-                        <SidebarMenuButton size="lg" asChild>
-                            <Link href={dashboard()} prefetch className="flex items-center gap-2">
-                                <div className="ml-1 grid flex-1 text-left">
-                                    <span className="mb-0.5 truncate leading-tight font-semibold text-sm">
-                                        🎬 OMDB<span className="text-red-500">Movies</span>
+                        <SidebarMenuButton size="lg" asChild className="group/menu-button">
+                            <Link href={dashboard()} prefetch className="flex items-center gap-3">
+                                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-red-500 to-red-600 shadow-md group-data-[collapsible=icon]:bg-gradient-to-br">
+                                    <Film className="h-5 w-5 text-white" />
+                                </div>
+                                <div className="grid flex-1 text-left transition-all group-data-[collapsible=icon]:opacity-0">
+                                    <span className="truncate font-semibold text-base text-foreground">
+                                        OMDB<span className="text-red-500">Movies</span>
                                     </span>
-                                    <small className="text-xs text-gray-300">Discover & save favorites</small>
+                                    <small className="truncate text-xs text-muted-foreground">
+                                        Discover & save favorites
+                                    </small>
                                 </div>
                             </Link>
                         </SidebarMenuButton>
@@ -72,14 +69,16 @@ export function AppSidebar() {
                 </SidebarMenu>
             </SidebarHeader>
 
-            <SidebarContent>
+            <SidebarContent className="bg-transparent">
                 <NavMain items={mainNavItems} />
             </SidebarContent>
 
-            <SidebarFooter>
-                <NavFooter items={footerNavItems} className="mt-auto" />
+            <SidebarFooter className="border-t border-sidebar-border/50 bg-sidebar/50 backdrop-blur-sm">
+                <NavFooter items={footerNavItems} />
                 <NavUser />
             </SidebarFooter>
+
+            <SidebarRail className="hover:bg-sidebar-border/30 transition-colors" />
         </Sidebar>
     );
 }

@@ -1,7 +1,7 @@
 import { Head } from '@inertiajs/react';
-import AppLayout from '@/layouts/app-layout';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import AppLayout from '@/layouts/app-layout';
 
 export default function MovieShow(props: { id: string }) {
     const { id } = props;

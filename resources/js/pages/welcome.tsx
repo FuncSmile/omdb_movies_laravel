@@ -1,8 +1,8 @@
 import { Head, Link, usePage } from '@inertiajs/react';
-import { dashboard, login, register } from '@/routes';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageToggle from '@/components/language-toggle';
+import { dashboard, login, register } from '@/routes';
 
 export default function Welcome({
     canRegister = true,

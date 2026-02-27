@@ -141,3 +141,46 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Sidebar Custom Styles */
+@layer components {
+    .sidebar-brand-gradient {
+        background: linear-gradient(135deg, hsl(var(--red-500)) 0%, hsl(var(--red-600)) 100%);
+    }
+    
+    .sidebar-item-active {
+        background: linear-gradient(90deg, hsl(var(--sidebar-accent)) 0%, transparent 100%);
+    }
+    
+    .sidebar-glass {
+        backdrop-filter: blur(8px);
+        background: hsl(var(--sidebar) / 0.5);
+    }
+}
+
+/* Smooth transitions for sidebar */
+[data-sidebar="sidebar"] {
+    transition: all 0.2s ease-in-out;
+}
+
+[data-sidebar="trigger"] {
+    transition: all 0.15s ease-in-out;
+}
+
+/* Custom scrollbar for sidebar content */
+[data-sidebar="content"]::-webkit-scrollbar {
+    width: 4px;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-thumb {
+    background: hsl(var(--sidebar-border));
+    border-radius: 2px;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--sidebar-accent-foreground) / 0.3);
+}

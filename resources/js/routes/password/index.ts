@@ -1,4 +1,4 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../wayfinder'
+import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../wayfinder'
 import confirmD7e05f from './confirm'
 /**
 * @see \Laravel\Fortify\Http\Controllers\PasswordResetLinkController::request
@@ -141,6 +141,16 @@ email.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 })
 
 /**
+* @see \Laravel\Fortify\Http\Controllers\PasswordResetLinkController::email
+* @see vendor/laravel/fortify/src/Http/Controllers/PasswordResetLinkController.php:30
+* @route '/forgot-password'
+*/
+email.form = (): RouteFormDefinition<'post'> => ({
+    action: email.url(),
+    method: 'post',
+})
+
+/**
 * @see \Laravel\Fortify\Http\Controllers\NewPasswordController::update
 * @see vendor/laravel/fortify/src/Http/Controllers/NewPasswordController.php:55
 * @route '/reset-password'
@@ -171,6 +181,16 @@ update.url = (options?: RouteQueryOptions) => {
 */
 update.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: update.url(options),
+    method: 'post',
+})
+
+/**
+* @see \Laravel\Fortify\Http\Controllers\NewPasswordController::update
+* @see vendor/laravel/fortify/src/Http/Controllers/NewPasswordController.php:55
+* @route '/reset-password'
+*/
+update.form = (): RouteFormDefinition<'post'> => ({
+    action: update.url(),
     method: 'post',
 })
 
