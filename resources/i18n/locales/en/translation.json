@@ -1,0 +1,47 @@
+{
+    "movie_list": "Movie List",
+    "loading": "Loading...",
+    "no_more_movies": "No more movies to show.",
+    "toggle_language": "Toggle Language",
+    "view_detail": "View Detail",
+    "search_placeholder": "Search movies...",
+    "search_button": "Search",
+    "year": "Year",
+    "type": "Type",
+    "back": "Back",
+    "movie_detail": "Movie Detail",
+    "not_available": "Not Available"
+    ,"add_favorite": "Add to Favorites"
+    ,"saved": "Saved"
+    ,"saving": "Saving..."
+    ,"favorites": "Favorites"
+    ,"no_favorites": "No favorites yet."
+    ,"remove": "Remove"
+    ,"hero_title": "Discover Your Favorite Movies"
+    ,"hero_subtitle": "Search millions of movies easily."
+    ,"cta_get_started": "Get Started"
+    ,"cta_go_dashboard": "Go to Dashboard"
+    ,"cta_create_account": "Create Account"
+    ,"featured_heading": "Featured Movies"
+    ,"featured_description": "Browse curated picks and discover new favorites. Click a card to view details."
+    ,"no_movies_found": "No movies found."
+    ,"login_title": "Log in to your account"
+    ,"login_description": "Enter your email and password below to log in"
+    ,"email_label": "Email address"
+    ,"password_label": "Password"
+    ,"forgot_password": "Forgot password?"
+    ,"remember_me": "Remember me"
+    ,"login_button": "Log in"
+    ,"signup_prompt": "Don't have an account? Sign up"
+    ,"register_title": "Create an account"
+    ,"register_description": "Enter your details below to create your account"
+    ,"name_label": "Name"
+    ,"confirm_password_label": "Confirm password"
+    ,"create_account_button": "Create account"
+    ,"already_have_account": "Already have an account? Log in"
+    ,"modal_not_logged_title": "⚠️ You are not logged in"
+    ,"modal_not_logged_message": "Please login first to view movie details."
+    ,"modal_login_button": "Login"
+    ,"modal_close_button": "Close"
+    ,"view_on_imdb": "View on IMDb ↗"
+}

@@ -1,0 +1,47 @@
+{
+    "movie_list": "Daftar Film",
+    "loading": "Memuat...",
+    "no_more_movies": "Tidak ada film lagi untuk ditampilkan.",
+    "toggle_language": "Ganti Bahasa",
+    "view_detail": "Lihat Detail",
+    "search_placeholder": "Cari film...",
+    "search_button": "Cari",
+    "year": "Tahun",
+    "type": "Tipe",
+    "back": "Kembali",
+    "movie_detail": "Detail Film",
+    "not_available": "Tidak Tersedia"
+    ,"add_favorite": "Tambahkan ke Favorit"
+    ,"saved": "Tersimpan"
+    ,"saving": "Menyimpan..."
+    ,"favorites": "Favorit"
+    ,"no_favorites": "Belum ada favorit."
+    ,"remove": "Hapus"
+    ,"hero_title": "Temukan Film Favorit Anda"
+    ,"hero_subtitle": "Cari jutaan film dengan mudah."
+    ,"cta_get_started": "Mulai"
+    ,"cta_go_dashboard": "Buka Dashboard"
+    ,"cta_create_account": "Buat Akun"
+    ,"featured_heading": "Film Pilihan"
+    ,"featured_description": "Jelajahi pilihan kurasi dan temukan favorit baru. Klik kartu untuk melihat detail."
+    ,"no_movies_found": "Tidak ada film ditemukan."
+    ,"login_title": "Masuk ke akun Anda"
+    ,"login_description": "Masukkan email dan kata sandi Anda untuk masuk"
+    ,"email_label": "Alamat email"
+    ,"password_label": "Kata sandi"
+    ,"forgot_password": "Lupa kata sandi?"
+    ,"remember_me": "Ingat saya"
+    ,"login_button": "Masuk"
+    ,"signup_prompt": "Belum punya akun? Daftar"
+    ,"register_title": "Buat akun"
+    ,"register_description": "Masukkan data Anda untuk membuat akun"
+    ,"name_label": "Nama"
+    ,"confirm_password_label": "Konfirmasi kata sandi"
+    ,"create_account_button": "Buat akun"
+    ,"already_have_account": "Sudah punya akun? Masuk"
+    ,"modal_not_logged_title": "⚠️ Anda belum login"
+    ,"modal_not_logged_message": "Silakan login terlebih dahulu untuk melihat detail film."
+    ,"modal_login_button": "Login"
+    ,"modal_close_button": "Tutup"
+    ,"view_on_imdb": "Lihat di IMDb ↗"
+}
