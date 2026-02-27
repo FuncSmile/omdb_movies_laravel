@@ -1,5 +1,4 @@
-import { queryParams   } from './../../../../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition} from './../../../../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\Settings\TwoFactorAuthenticationController::show
 * @see app/Http/Controllers/Settings/TwoFactorAuthenticationController.php:28

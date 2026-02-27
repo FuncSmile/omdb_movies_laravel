@@ -1,5 +1,4 @@
-import { queryParams   } from './../../../../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition} from './../../../../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../../wayfinder'
 /**
 * @see \Laravel\Fortify\Http\Controllers\TwoFactorSecretKeyController::show
 * @see vendor/laravel/fortify/src/Http/Controllers/TwoFactorSecretKeyController.php:17

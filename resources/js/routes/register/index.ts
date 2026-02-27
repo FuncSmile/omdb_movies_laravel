@@ -1,5 +1,4 @@
-import { queryParams    } from './../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition, RouteFormDefinition} from './../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::store
 * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:53
@@ -31,16 +30,6 @@ store.url = (options?: RouteQueryOptions) => {
 */
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: store.url(options),
-    method: 'post',
-})
-
-/**
-* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::store
-* @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:53
-* @route '/register'
-*/
-store.form = (): RouteFormDefinition<'post'> => ({
-    action: store.url(),
     method: 'post',
 })
 

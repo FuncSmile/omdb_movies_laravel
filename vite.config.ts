@@ -10,10 +10,7 @@ export default defineConfig(({ mode }) => ({
             input: ['resources/css/app.css', 'resources/js/app.jsx'],
             refresh: true,
         }),
-        wayfinder({
-            // Only generate types in development, skip during production build
-            generate: mode !== 'production',
-        }),
+        wayfinder(),
         react(),
     ],
 }));

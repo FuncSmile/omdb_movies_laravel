@@ -1,5 +1,4 @@
-import { queryParams   } from './../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition} from './../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see \Inertia\Controller::__invoke
 * @see vendor/inertiajs/inertia-laravel/src/Controller.php:13

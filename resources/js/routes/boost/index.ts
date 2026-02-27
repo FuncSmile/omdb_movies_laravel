@@ -1,5 +1,4 @@
-import { queryParams   } from './../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition} from './../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see [serialized-closure]:2
 * @route '/_boost/browser-logs'

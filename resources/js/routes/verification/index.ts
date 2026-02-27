@@ -1,5 +1,4 @@
-import { queryParams,    applyUrlDefaults } from './../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition, RouteFormDefinition} from './../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../wayfinder'
 /**
 * @see \Laravel\Fortify\Http\Controllers\EmailVerificationPromptController::notice
 * @see vendor/laravel/fortify/src/Http/Controllers/EmailVerificationPromptController.php:18
@@ -136,16 +135,6 @@ send.url = (options?: RouteQueryOptions) => {
 */
 send.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: send.url(options),
-    method: 'post',
-})
-
-/**
-* @see \Laravel\Fortify\Http\Controllers\EmailVerificationNotificationController::send
-* @see vendor/laravel/fortify/src/Http/Controllers/EmailVerificationNotificationController.php:19
-* @route '/email/verification-notification'
-*/
-send.form = (): RouteFormDefinition<'post'> => ({
-    action: send.url(),
     method: 'post',
 })
 

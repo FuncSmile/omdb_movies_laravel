@@ -1,5 +1,4 @@
-import { queryParams    } from './../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition, RouteFormDefinition} from './../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see \App\Http\Controllers\Settings\ProfileController::edit
 * @see app/Http/Controllers/Settings/ProfileController.php:20
@@ -75,16 +74,6 @@ update.url = (options?: RouteQueryOptions) => {
 */
 update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(options),
-    method: 'patch',
-})
-
-/**
-* @see \App\Http\Controllers\Settings\ProfileController::update
-* @see app/Http/Controllers/Settings/ProfileController.php:31
-* @route '/settings/profile'
-*/
-update.form = (): RouteFormDefinition<'patch'> => ({
-    action: update.url(),
     method: 'patch',
 })
 

@@ -40,7 +40,7 @@ export function NavMain({ items = [] }: { items: NavItem[] }) {
                                 `}
                             >
                                 <Link href={item.href} prefetch className="flex items-center gap-3">
-                                    <item.icon 
+                                    <item.icon
                                         className={`
                                             h-5 w-5 transition-transform duration-200 
                                             ${isActive ? 'text-red-500 scale-110' : 'text-muted-foreground group-hover:text-foreground'}

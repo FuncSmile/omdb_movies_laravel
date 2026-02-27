@@ -1,5 +1,4 @@
-import { queryParams    } from './../../wayfinder'
-import type {RouteQueryOptions, RouteDefinition, RouteFormDefinition} from './../../wayfinder';
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see \App\Http\Controllers\Settings\PasswordController::edit
 * @see app/Http/Controllers/Settings/PasswordController.php:16
@@ -75,16 +74,6 @@ update.url = (options?: RouteQueryOptions) => {
 */
 update.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(options),
-    method: 'put',
-})
-
-/**
-* @see \App\Http\Controllers\Settings\PasswordController::update
-* @see app/Http/Controllers/Settings/PasswordController.php:24
-* @route '/settings/password'
-*/
-update.form = (): RouteFormDefinition<'put'> => ({
-    action: update.url(),
     method: 'put',
 })
 
