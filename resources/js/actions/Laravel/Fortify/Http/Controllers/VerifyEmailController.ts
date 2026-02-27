@@ -1,4 +1,5 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../../wayfinder'
+import { queryParams,   applyUrlDefaults } from './../../../../../wayfinder'
+import type {RouteQueryOptions, RouteDefinition} from './../../../../../wayfinder';
 /**
 * @see \Laravel\Fortify\Http\Controllers\VerifyEmailController::__invoke
 * @see vendor/laravel/fortify/src/Http/Controllers/VerifyEmailController.php:18

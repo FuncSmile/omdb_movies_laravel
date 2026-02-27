@@ -1,8 +1,8 @@
 'use client';
 
+import { Search, Globe } from 'lucide-react';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, Globe } from 'lucide-react';
 import MovieCard from '@/components/movieCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

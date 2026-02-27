@@ -1,4 +1,5 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../wayfinder'
+import { queryParams   } from './../../../wayfinder'
+import type {RouteQueryOptions, RouteDefinition} from './../../../wayfinder';
 /**
 * @see \Illuminate\Routing\RedirectController::__invoke
 * @see vendor/laravel/framework/src/Illuminate/Routing/RedirectController.php:19

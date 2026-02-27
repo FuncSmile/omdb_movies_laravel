@@ -1,4 +1,5 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../../wayfinder'
+import { queryParams   } from './../../../../../wayfinder'
+import type {RouteQueryOptions, RouteDefinition} from './../../../../../wayfinder';
 /**
 * @see \App\Http\Controllers\Settings\PasswordController::edit
 * @see app/Http/Controllers/Settings/PasswordController.php:16

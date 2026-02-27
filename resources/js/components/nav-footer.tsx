@@ -1,7 +1,7 @@
 'use client';
 
-import type { ComponentPropsWithoutRef } from 'react';
 import { ExternalLink } from 'lucide-react';
+import type { ComponentPropsWithoutRef } from 'react';
 import {
     SidebarGroup,
     SidebarGroupContent,

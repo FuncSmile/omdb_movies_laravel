@@ -21,7 +21,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { useMobileNavigation } from '@/hooks/use-mobile-navigation';
 import { logout } from '@/routes';
 import { edit } from '@/routes/profile';
-import type { User as UserType } from '@/types';
 
 export function NavUser() {
     const { auth } = usePage().props;
