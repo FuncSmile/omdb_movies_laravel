@@ -28,3 +28,7 @@ export function queryParams(options?: RouteQueryOptions): string {
     const queryString = params.toString();
     return queryString ? `?${queryString}` : '';
 }
+
+export function applyUrlDefaults<T extends Record<string, string | number>>(args: T): T {
+    return args;
+}
