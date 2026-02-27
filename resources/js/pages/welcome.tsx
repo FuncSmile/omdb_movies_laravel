@@ -184,9 +184,9 @@ export default function Welcome({
                     )}
 
                     <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                        {movies.map((movie) => (
+                        {movies.map((movie, index) => (
                             <div
-                                key={movie.imdbID}
+                                key={`${movie.imdbID}-${index}`}
                                 className="relative"
                             >
                                 <div
