@@ -42,6 +42,15 @@ Route::get('/search-movie', function (Request $request) {
     return $response->json();
 });
 
+Route::get('/migrate-db', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        return 'Yesss! Migrasi database berhasil! Tabel sudah dibuat.';
+    } catch (\Exception $e) {
+        return 'Error: ' . $e->getMessage();
+    }
+});
+
 // Movie detail JSON endpoint (client-side will fetch this)
 Route::get('/movie-detail', function (Request $request) {
     $id = $request->query('id');
