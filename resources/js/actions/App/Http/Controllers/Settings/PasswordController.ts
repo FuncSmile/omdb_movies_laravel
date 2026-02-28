@@ -1,4 +1,4 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../../wayfinder'
+import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\Settings\PasswordController::edit
 * @see app/Http/Controllers/Settings/PasswordController.php:16
@@ -48,9 +48,13 @@ edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 * @see app/Http/Controllers/Settings/PasswordController.php:24
 * @route '/settings/password'
 */
-export const update = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (options?: RouteQueryOptions): RouteDefinition<'put'> & { form(): RouteFormDefinition<'put'> } => ({
     url: update.url(options),
     method: 'put',
+    form: () => ({
+        action: update.definition.url,
+        method: 'put',
+    }),
 })
 
 update.definition = {
