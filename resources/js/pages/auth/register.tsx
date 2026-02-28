@@ -8,19 +8,21 @@ import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import AuthLayout from '@/layouts/auth-layout';
 import { login } from '@/routes';
-import { store } from '@/routes/register';
 
 export default function Register() {
     const { t } = useTranslation();
 
     return (
-        <AuthLayout title={t('register_title')} description={t('register_description')}>
+        <AuthLayout
+            title={t('register_title')}
+            description={t('register_description')}
+        >
             <Head title={t('register_title')} />
 
             <Form
-                {...store.form()}
-                resetOnSuccess={['password', 'password_confirmation']}
-                disableWhileProcessing
+                action="/register" // <-- Ganti baris loginRoutes dengan ini
+                method="post" // <-- Tambahkan method post
+                resetOnSuccess={['password']}
                 className="flex flex-col gap-6"
             >
                 {({ processing, errors }) => (
@@ -38,11 +40,16 @@ export default function Register() {
                                     name="name"
                                     placeholder={t('name_label')}
                                 />
-                                <InputError message={errors.name} className="mt-2" />
+                                <InputError
+                                    message={errors.name}
+                                    className="mt-2"
+                                />
                             </div>
 
                             <div className="grid gap-2">
-                                <Label htmlFor="email">{t('email_label')}</Label>
+                                <Label htmlFor="email">
+                                    {t('email_label')}
+                                </Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -56,7 +63,9 @@ export default function Register() {
                             </div>
 
                             <div className="grid gap-2">
-                                <Label htmlFor="password">{t('password_label')}</Label>
+                                <Label htmlFor="password">
+                                    {t('password_label')}
+                                </Label>
                                 <Input
                                     id="password"
                                     type="password"
@@ -70,7 +79,9 @@ export default function Register() {
                             </div>
 
                             <div className="grid gap-2">
-                                <Label htmlFor="password_confirmation">{t('confirm_password_label')}</Label>
+                                <Label htmlFor="password_confirmation">
+                                    {t('confirm_password_label')}
+                                </Label>
                                 <Input
                                     id="password_confirmation"
                                     type="password"
@@ -80,10 +91,17 @@ export default function Register() {
                                     name="password_confirmation"
                                     placeholder={t('confirm_password_label')}
                                 />
-                                <InputError message={errors.password_confirmation} />
+                                <InputError
+                                    message={errors.password_confirmation}
+                                />
                             </div>
 
-                            <Button type="submit" className="mt-2 w-full" tabIndex={5} data-test="register-user-button">
+                            <Button
+                                type="submit"
+                                className="mt-2 w-full"
+                                tabIndex={5}
+                                data-test="register-user-button"
+                            >
                                 {processing && <Spinner />}
                                 {t('create_account_button')}
                             </Button>
@@ -101,4 +119,3 @@ export default function Register() {
         </AuthLayout>
     );
 }
-

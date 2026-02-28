@@ -1,4 +1,4 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see \App\Http\Controllers\Settings\ProfileController::edit
 * @see app/Http/Controllers/Settings/ProfileController.php:20
@@ -48,13 +48,9 @@ edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 * @see app/Http/Controllers/Settings/ProfileController.php:31
 * @route '/settings/profile'
 */
-export const update = (options?: RouteQueryOptions): RouteDefinition<'patch'> & { form(): RouteFormDefinition<'patch'> } => ({
+export const update = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(options),
     method: 'patch',
-    form: () => ({
-        action: update.definition.url,
-        method: 'patch',
-    }),
 })
 
 update.definition = {
@@ -86,13 +82,9 @@ update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
 * @see app/Http/Controllers/Settings/ProfileController.php:47
 * @route '/settings/profile'
 */
-export const destroy = (options?: RouteQueryOptions): RouteDefinition<'delete'> & { form(): RouteFormDefinition<'delete'> } => ({
+export const destroy = (options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroy.url(options),
     method: 'delete',
-    form: () => ({
-        action: destroy.definition.url,
-        method: 'delete',
-    }),
 })
 
 destroy.definition = {

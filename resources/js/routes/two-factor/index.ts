@@ -1,4 +1,4 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 import loginDf2c2a from './login'
 /**
 * @see \Laravel\Fortify\Http\Controllers\TwoFactorAuthenticatedSessionController::login
@@ -49,13 +49,9 @@ login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 * @see vendor/laravel/fortify/src/Http/Controllers/TwoFactorAuthenticationController.php:21
 * @route '/user/two-factor-authentication'
 */
-export const enable = (options?: RouteQueryOptions): RouteDefinition<'post'> & { form(): RouteFormDefinition<'post'> } => ({
+export const enable = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: enable.url(options),
     method: 'post',
-    form: () => ({
-        action: enable.definition.url,
-        method: 'post',
-    }),
 })
 
 enable.definition = {
@@ -87,13 +83,9 @@ enable.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 * @see vendor/laravel/fortify/src/Http/Controllers/ConfirmedTwoFactorAuthenticationController.php:19
 * @route '/user/confirmed-two-factor-authentication'
 */
-export const confirm = (options?: RouteQueryOptions): RouteDefinition<'post'> & { form(): RouteFormDefinition<'post'> } => ({
+export const confirm = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: confirm.url(options),
     method: 'post',
-    form: () => ({
-        action: confirm.definition.url,
-        method: 'post',
-    }),
 })
 
 confirm.definition = {
@@ -125,13 +117,9 @@ confirm.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 * @see vendor/laravel/fortify/src/Http/Controllers/TwoFactorAuthenticationController.php:35
 * @route '/user/two-factor-authentication'
 */
-export const disable = (options?: RouteQueryOptions): RouteDefinition<'delete'> & { form(): RouteFormDefinition<'delete'> } => ({
+export const disable = (options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: disable.url(options),
     method: 'delete',
-    form: () => ({
-        action: disable.definition.url,
-        method: 'delete',
-    }),
 })
 
 disable.definition = {
@@ -295,13 +283,9 @@ recoveryCodes.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 * @see vendor/laravel/fortify/src/Http/Controllers/RecoveryCodeController.php:38
 * @route '/user/two-factor-recovery-codes'
 */
-export const regenerateRecoveryCodes = (options?: RouteQueryOptions): RouteDefinition<'post'> & { form(): RouteFormDefinition<'post'> } => ({
+export const regenerateRecoveryCodes = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: regenerateRecoveryCodes.url(options),
     method: 'post',
-    form: () => ({
-        action: regenerateRecoveryCodes.definition.url,
-        method: 'post',
-    }),
 })
 
 regenerateRecoveryCodes.definition = {

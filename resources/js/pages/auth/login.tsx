@@ -32,7 +32,8 @@ export default function Login({
             <Head title="Log in" />
 
             <Form
-                {...loginRoutes.store.form()}
+                action="/login" // <-- Ganti baris loginRoutes dengan ini
+                method="post" // <-- Tambahkan method post
                 resetOnSuccess={['password']}
                 className="flex flex-col gap-6"
             >
@@ -40,7 +41,9 @@ export default function Login({
                     <>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
-                                <Label htmlFor="email">{t('email_label')}</Label>
+                                <Label htmlFor="email">
+                                    {t('email_label')}
+                                </Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -56,15 +59,17 @@ export default function Login({
 
                             <div className="grid gap-2">
                                 <div className="flex items-center">
-                                    <Label htmlFor="password">{t('password_label')}</Label>
+                                    <Label htmlFor="password">
+                                        {t('password_label')}
+                                    </Label>
                                     {canResetPassword && (
-                                            <TextLink
-                                                href={request()}
-                                                className="ml-auto text-sm"
-                                                tabIndex={5}
-                                            >
-                                                {t('forgot_password')}
-                                            </TextLink>
+                                        <TextLink
+                                            href={request()}
+                                            className="ml-auto text-sm"
+                                            tabIndex={5}
+                                        >
+                                            {t('forgot_password')}
+                                        </TextLink>
                                     )}
                                 </div>
                                 <Input
@@ -85,7 +90,9 @@ export default function Login({
                                     name="remember"
                                     tabIndex={3}
                                 />
-                                <Label htmlFor="remember">{t('remember_me')}</Label>
+                                <Label htmlFor="remember">
+                                    {t('remember_me')}
+                                </Label>
                             </div>
 
                             <Button

@@ -1,16 +1,12 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
+import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../wayfinder'
 /**
 * @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::store
 * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:53
 * @route '/register'
 */
-export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> & { form(): RouteFormDefinition<'post'> } => ({
+export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: store.url(options),
     method: 'post',
-    form: () => ({
-        action: store.definition.url,
-        method: 'post',
-    }),
 })
 
 store.definition = {
